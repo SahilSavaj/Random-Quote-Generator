@@ -67,7 +67,7 @@ export default function QuoteGenerator(){
                         </div>
                         <div className="actions" id="actions">
                             <button className="tweet" id="tweet" title="Tweet it!">
-                                <a target="_blank"href={twitter_url+quote+"%22"+double_line_gap+"~"+author}><RiTwitterLine className="twitter-logo"/></a>
+                                <a target="_blank" rel="noreferrer" href={twitter_url+quote+"%22"+double_line_gap+"~"+author}><RiTwitterLine className="twitter-logo"/></a>
                                 
                             </button>
                             <button className="new-quote" id="new-quote" onClick={(e)=>{getQuote()}}>
