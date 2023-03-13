@@ -1,0 +1,26 @@
+:root {
+    --logo_size:10vmin;
+}
+
+.header{
+    background-color: white;
+    color:#282c34;
+    min-height: fit-content;
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 5vmin);
+    padding: 10px 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; 
+    text-shadow:0 2px 5px #282c34;
+
+}
+.header .logo{
+    width: var(--logo_size);
+    height: var(--logo_size);
+    padding-right: 10px;
+}

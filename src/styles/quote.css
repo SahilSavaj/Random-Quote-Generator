@@ -1,0 +1,120 @@
+:root {
+    --loder_size:50px;
+    --quote_font:4vmin;
+    --author_font:3vmin;
+    --btn_font:2.5vmin;
+    --twitter_logo:50px;
+  --dark_bg:#282c34;
+
+}
+a, a:hover, a:visited, a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+.loader{
+    width: var(--loder_size);
+    height: var(--loder_size);
+    animation-name: spin;
+    animation-duration: 1100ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transition-timing-function: ease-in-out;
+    color: white;
+    transition: opacity 2000ms ease;
+    transition-timing-function: ease-in-out;
+}
+.content{
+    animation-name: render;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+    transition-timing-function: ease-in-out;
+    color: white;
+    max-width: 70%;
+    min-width: 60%;
+    /* padding: 0 200px; */
+
+}
+.quotebox{
+    /* display: flex;
+    flex-direction: column; */
+    padding: 50px;
+}
+.display{
+    display: grid;
+    grid-auto-flow: row;
+    grid-column-gap: 100px;
+    padding:50px 0px;
+}
+.quote{
+    text-align: justify;
+    font-size: var(--quote_font);
+    padding: 10px 0;
+    justify-self: center;
+    align-self: center;
+}
+.author{
+    text-align: start;
+    font-style: italic;
+    font-size: var(--author_font);
+}
+.actions{
+    display: grid;
+    grid-auto-flow: column;
+    grid-column-gap: 100px;
+    padding:0 100px;
+}
+button{
+    font-size: var(--btn_font);
+    width: fit-content;
+    border-radius:10px;
+    border: 1px solid white;
+    color: white;
+    background-color: var(--dark_bg);
+}
+
+.new-quote{
+    justify-self: end;
+    padding: 0 20px;
+}
+.twitter-logo{
+    width: var(--twitter_logo);
+    height: var(--twitter_logo);
+}
+.tweet:hover,.new-quote:hover{
+    background-color: white;
+    color: var(--dark_bg);
+    transition: 200ms ease-in-out;
+}
+button:hover{
+    cursor: pointer;
+}
+
+
+@keyframes spin {
+    0% {
+        transform:rotate(0deg);
+        width: calc(var(--loder_size) - 10px);
+    }
+    50% {
+        transform:rotate(180deg);
+        width: calc(var(--loder_size));
+
+    }
+    100% {
+        transform:rotate(360deg);
+        width: calc(var(--loder_size) - 10px);
+
+    }
+    
+}
+
+@keyframes render{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+
+}
